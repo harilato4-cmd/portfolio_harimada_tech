@@ -342,3 +342,56 @@ window.addEventListener('load', () => {
   langButtons.forEach(btn => btn.addEventListener('click', () => applyLanguage(btn.dataset.langSwitch || 'en')));
   applyLanguage(initial);
 })();
+
+
+// Production: EmailJS-ready contact form with FormSubmit fallback.
+(function(){
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+  if(!form) return;
+  function setStatus(text, type){ if(status){ status.textContent=text; status.className='form-status '+(type||''); } }
+  form.addEventListener('submit', function(e){
+    const cfg = window.EMAILJS_CONFIG || {};
+    const hasEmailJS = window.emailjs && cfg.publicKey && cfg.serviceId && cfg.templateId && cfg.publicKey !== 'YOUR_PUBLIC_KEY';
+    if(!hasEmailJS){
+      setStatus('Sending securely...', '');
+      return; // normal FormSubmit fallback
+    }
+    e.preventDefault();
+    setStatus('Sending message...', '');
+    try{
+      emailjs.init({ publicKey: cfg.publicKey });
+      emailjs.sendForm(cfg.serviceId, cfg.templateId, form).then(function(){
+        setStatus('Message sent successfully. Thank you!', 'success');
+        form.reset();
+      }, function(){
+        setStatus('EmailJS failed. Opening secure fallback...', 'error');
+        setTimeout(()=>form.submit(), 800);
+      });
+    }catch(err){
+      setStatus('Opening secure fallback...', '');
+      setTimeout(()=>form.submit(), 500);
+    }
+  });
+})();
+
+// Production: service worker registration for PWA caching.
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>{
+    navigator.serviceWorker.register('sw.js').catch(()=>{});
+  });
+}
+
+// Production: keep downloadable CV aligned with current language.
+(function(){
+  const updateDownloads=()=>{
+    const lang=document.documentElement.lang || localStorage.getItem('portfolio_lang') || 'en';
+    document.querySelectorAll('a.download-cv').forEach(a=>{
+      a.href = lang === 'fr' ? 'assets/cv/cv-fr.pdf' : 'assets/cv/cv-en.pdf';
+      a.setAttribute('download', lang === 'fr' ? 'CV-Ange-Harilanto-Ramaroson-FR.pdf' : 'CV-Ange-Harilanto-Ramaroson-EN.pdf');
+      if(a.textContent.includes('Download') || a.textContent.includes('Télécharger') || a.textContent.includes('⬇')) a.textContent = lang === 'fr' ? '⬇ Télécharger CV' : '⬇ Download CV';
+    });
+  };
+  window.addEventListener('DOMContentLoaded', updateDownloads);
+  document.querySelectorAll('[data-lang-switch]').forEach(btn=>btn.addEventListener('click',()=>setTimeout(updateDownloads,50)));
+})();

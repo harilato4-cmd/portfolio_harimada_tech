@@ -1,27 +1,43 @@
-# Portfolio Harilanto Bilingual Final
+# Harilanto Portfolio Production 2026
 
-Version finale basée sur le design V7.3.8, avec seulement des améliorations finales :
+Official bilingual portfolio for **Ange Harilanto Ramaroson** — Founder & CEO of **HariMada Tech**.
 
-- Sélecteur de langue EN / FR
-- Détection automatique de la langue du navigateur
-- Mémorisation du choix de langue
-- CV anglais et CV français
-- SEO bilingue de base
-- Compatible Vercel, Netlify et GitHub Pages
-- Aucun backend, aucun hébergement payant
+## Production features
 
-## Fichiers importants
+- Bilingual FR / EN portfolio
+- SEO meta tags, Open Graph and structured data
+- robots.txt and sitemap.xml
+- PWA manifest and service worker
+- Optimized profile images with WebP
+- Lazy loading for project images
+- WhatsApp direct contact
+- FormSubmit fallback contact form
+- EmailJS-ready contact form configuration
+- Downloadable CV in English and French
 
-- `index.html` : Portfolio principal
-- `cv-en.html` : CV anglais
-- `cv-fr.html` : CV français
-- `assets/css/style.css` : Style principal
-- `assets/js/main.js` : Animations + langue
+## Deploy on Vercel
 
-## Hébergement gratuit recommandé
+1. Push all files to GitHub.
+2. Import the repository in Vercel.
+3. Keep framework as **Other**.
+4. Deploy.
 
-Vous pouvez publier gratuitement sur :
+## Important after deployment
 
-- Vercel
-- Netlify
-- GitHub Pages
+Replace `https://harilanto-portfolio.vercel.app` in these files with your real Vercel domain:
+
+- `index.html`
+- `robots.txt`
+- `sitemap.xml`
+
+## Enable EmailJS
+
+Edit `assets/js/emailjs-config.js` and replace:
+
+```js
+publicKey: "YOUR_PUBLIC_KEY",
+serviceId: "YOUR_SERVICE_ID",
+templateId: "YOUR_TEMPLATE_ID"
+```
+
+Until this is configured, the form continues to work using FormSubmit fallback.

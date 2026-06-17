@@ -9,6 +9,41 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Production SEO -->
+  <meta name="keywords" content="Ange Harilanto Ramaroson, HariMada Tech, Full-Stack Developer, PHP Developer, Node.js Developer, MySQL, JavaScript, Web Developer Madagascar, portfolio" />
+  <meta name="author" content="Ange Harilanto Ramaroson" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://portfolio-harimad-tech.vercel.app/" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="assets/img/icon-192.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ange Harilanto Ramaroson | Founder & CEO - HariMada Tech" />
+  <meta property="og:description" content="Full-Stack Web Developer specialized in PHP, Node.js, JavaScript, MySQL, admin dashboards, databases and responsive websites." />
+  <meta property="og:image" content="https://portfolio-harimad-tech.vercel.app/assets/img/og-image.png" />
+  <meta property="og:url" content="https://portfolio-harimad-tech.vercel.app/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ange Harilanto Ramaroson | Full-Stack Web Developer" />
+  <meta name="twitter:description" content="Founder & CEO of HariMada Tech. I build modern websites, dashboards, databases and Node.js APIs." />
+  <meta name="twitter:image" content="https://portfolio-harimad-tech.vercel.app/assets/img/og-image.png" />
+  <link rel="preload" as="image" href="assets/img/profile.webp" type="image/webp" />
+  <link rel="prefetch" href="cv-en.html" />
+  <link rel="prefetch" href="cv-fr.html" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Ange Harilanto Ramaroson",
+    "jobTitle":"Founder & CEO, Full-Stack Web Developer",
+    "email":"mailto:harilato4@gmail.com",
+    "telephone":"+261322160631",
+    "address":{"@type":"PostalAddress","addressLocality":"Antananarivo","addressCountry":"Madagascar"},
+    "worksFor":{"@type":"Organization","name":"HariMada Tech"},
+    "url":"https://harilanto-portfolio.vercel.app/",
+    "knowsAbout":["PHP","Node.js","JavaScript","MySQL","Web Development","Databases","REST API","Responsive Design"]
+  }
+  </script>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -31,7 +66,7 @@
 
   <aside class="side-panel" id="sidePanel">
     <div class="profile-mini tilt-card">
-      <img src="assets/img/profile.jpg" alt="Ange Harilanto Ramaroson profile photo">
+      <picture><source srcset="assets/img/profile.webp" type="image/webp"><img src="assets/img/profile.jpg" alt="Ange Harilanto Ramaroson profile photo" width="180" height="180" decoding="async"></picture>
       <span class="available"><i></i> Disponible</span>
       <h2>Ange Harilanto Ramaroson</h2>
       <p>Développeur & Formateur</p>
@@ -53,6 +88,7 @@
     </nav>
     <div class="social-mini">
       <a href="cv.html" target="_blank">📄 View My CV</a>
+      <a class="download-cv" href="assets/cv/cv-en.pdf" download>⬇ Download CV</a>
       <a href="mailto:harilato4@gmail.com">harilato4@gmail.com</a>
       <a href="https://wa.me/261322160631?text=Hello%20Harilanto,%20I%20found%20your%20portfolio%20and%20I%20would%20like%20to%20discuss%20a%20project." target="_blank">WhatsApp: +261 32 21 606 31</a>
     </div>
@@ -72,6 +108,7 @@
             <a class="btn primary magnetic" href="#contact">Hire Me</a>
             <a class="btn ghost magnetic" href="#projects">View Projects</a>
             <a class="btn ghost magnetic" href="cv.html" target="_blank">View CV</a>
+            <a class="btn ghost magnetic download-cv" href="assets/cv/cv-en.pdf" download>Download CV</a>
             <a class="btn ghost magnetic" href="#skills">Technologies</a>
           </div>
           <div class="hero-stats">
@@ -82,7 +119,7 @@
         </div>
         <div class="hero-photo reveal tilt-card">
           <span class="scanline"></span>
-          <img src="assets/img/profile.jpg" alt="Professional portrait of Ange Harilanto Ramaroson">
+          <picture><source srcset="assets/img/profile.webp" type="image/webp"><img src="assets/img/profile.jpg" alt="Professional portrait of Ange Harilanto Ramaroson" width="420" height="560" fetchpriority="high" decoding="async"></picture>
           <div class="floating-badge one">CEO / Founder</div>
           <div class="floating-badge two">PHP • Node.js • MySQL</div>
         </div>
@@ -157,14 +194,14 @@
         <button class="filter-btn" data-filter="database">Database</button>
       </div>
       <div class="project-list">
-        <article class="project-card reveal tilt-card" data-category="real"><div class="project-img"><img src="assets/projects/project-1.svg" alt="HariMada Tech website mockup"></div><div><p class="tag">Real Project</p><h3>HariMada Tech Official Website</h3><p>Professional website for an IT training center with course presentation, contact actions, and responsive design.</p><p class="stack">HTML • CSS • JavaScript • PHP • SEO</p><a href="#contact">Discuss similar project →</a></div></article>
-        <article class="project-card reveal tilt-card" data-category="real database"><div class="project-img"><img src="assets/projects/project-2.svg" alt="School ERP mockup"></div><div><p class="tag">Real Project</p><h3>HariMada School ERP</h3><p>School management system with dashboard, student management, teacher CRM, payments, attendance, reports, and admin modules.</p><p class="stack">PHP • MySQL • JavaScript • Bootstrap • Charts</p><a href="#contact">Discuss similar project →</a></div></article>
-        <article class="project-card reveal tilt-card" data-category="real database"><div class="project-img"><img src="assets/projects/project-3.svg" alt="Language school website mockup"></div><div><p class="tag">Real Project</p><h3>HariMada Language School Website</h3><p>Language school platform with online registration, course management, payment information, and admin dashboard.</p><p class="stack">PHP • JavaScript • MySQL • Admin Panel</p><a href="#contact">Discuss similar project →</a></div></article>
-        <article class="project-card reveal tilt-card" data-category="real"><div class="project-img"><img src="assets/projects/project-4.svg" alt="Born To Speak website mockup"></div><div><p class="tag">Real Project</p><h3>Born To Speak Website</h3><p>Professional website concept and digital presence improvements for a language/training organization, focused on trust and lead generation.</p><p class="stack">HTML • CSS • JavaScript • Responsive UI</p><a href="#contact">Discuss similar project →</a></div></article>
-        <article class="project-card reveal tilt-card" data-category="real database"><div class="project-img"><img src="assets/projects/project-6.svg" alt="Database system mockup"></div><div><p class="tag">Real Project</p><h3>Student & Client Database System</h3><p>Structured database for registrations, clients, payments, filters, Excel import/export, and administrative tracking.</p><p class="stack">MySQL • PHP • Excel • CRUD • Filters</p><a href="#contact">Discuss similar project →</a></div></article>
-        <article class="project-card reveal tilt-card" data-category="demo"><div class="project-img"><img src="assets/projects/project-5.svg" alt="Node API mockup"></div><div><p class="tag personal">Demo Project</p><h3>Node.js REST API</h3><p>Backend API demonstration with clean routes, authentication structure, CRUD endpoints, and scalable organization.</p><p class="stack">Node.js • Express.js • REST API • MySQL</p><a href="#contact">Discuss similar project →</a></div></article>
-        <article class="project-card reveal tilt-card" data-category="demo database"><div class="project-img"><img src="assets/projects/project-2.svg" alt="PHP CRM mockup"></div><div><p class="tag personal">Demo Project</p><h3>PHP/MySQL CRM System</h3><p>Customer management concept with dashboard, invoices, search filters, client status, and reporting.</p><p class="stack">PHP • MySQL • Bootstrap • JavaScript</p><a href="#contact">Discuss similar project →</a></div></article>
-        <article class="project-card reveal tilt-card" data-category="demo"><div class="project-img"><img src="assets/projects/project-1.svg" alt="Landing page mockup"></div><div><p class="tag personal">Demo Project</p><h3>Modern Business Landing Page</h3><p>Conversion-focused landing page with strong hero section, animated service cards, pricing, and contact CTA.</p><p class="stack">HTML • CSS • JavaScript • Animation</p><a href="#contact">Discuss similar project →</a></div></article>
+        <article class="project-card reveal tilt-card" data-category="real"><div class="project-img"><img src="assets/projects/project-1.svg" alt="HariMada Tech website mockup" loading="lazy" decoding="async"></div><div><p class="tag">Real Project</p><h3>HariMada Tech Official Website</h3><p>Professional website for an IT training center with course presentation, contact actions, and responsive design.</p><p class="stack">HTML • CSS • JavaScript • PHP • SEO</p><a href="#contact">Discuss similar project →</a></div></article>
+        <article class="project-card reveal tilt-card" data-category="real database"><div class="project-img"><img src="assets/projects/project-2.svg" alt="School ERP mockup" loading="lazy" decoding="async"></div><div><p class="tag">Real Project</p><h3>HariMada School ERP</h3><p>School management system with dashboard, student management, teacher CRM, payments, attendance, reports, and admin modules.</p><p class="stack">PHP • MySQL • JavaScript • Bootstrap • Charts</p><a href="#contact">Discuss similar project →</a></div></article>
+        <article class="project-card reveal tilt-card" data-category="real database"><div class="project-img"><img src="assets/projects/project-3.svg" alt="Language school website mockup" loading="lazy" decoding="async"></div><div><p class="tag">Real Project</p><h3>HariMada Language School Website</h3><p>Language school platform with online registration, course management, payment information, and admin dashboard.</p><p class="stack">PHP • JavaScript • MySQL • Admin Panel</p><a href="#contact">Discuss similar project →</a></div></article>
+        <article class="project-card reveal tilt-card" data-category="real"><div class="project-img"><img src="assets/projects/project-4.svg" alt="Born To Speak website mockup" loading="lazy" decoding="async"></div><div><p class="tag">Real Project</p><h3>Born To Speak Website</h3><p>Professional website concept and digital presence improvements for a language/training organization, focused on trust and lead generation.</p><p class="stack">HTML • CSS • JavaScript • Responsive UI</p><a href="#contact">Discuss similar project →</a></div></article>
+        <article class="project-card reveal tilt-card" data-category="real database"><div class="project-img"><img src="assets/projects/project-6.svg" alt="Database system mockup" loading="lazy" decoding="async"></div><div><p class="tag">Real Project</p><h3>Student & Client Database System</h3><p>Structured database for registrations, clients, payments, filters, Excel import/export, and administrative tracking.</p><p class="stack">MySQL • PHP • Excel • CRUD • Filters</p><a href="#contact">Discuss similar project →</a></div></article>
+        <article class="project-card reveal tilt-card" data-category="demo"><div class="project-img"><img src="assets/projects/project-5.svg" alt="Node API mockup" loading="lazy" decoding="async"></div><div><p class="tag personal">Demo Project</p><h3>Node.js REST API</h3><p>Backend API demonstration with clean routes, authentication structure, CRUD endpoints, and scalable organization.</p><p class="stack">Node.js • Express.js • REST API • MySQL</p><a href="#contact">Discuss similar project →</a></div></article>
+        <article class="project-card reveal tilt-card" data-category="demo database"><div class="project-img"><img src="assets/projects/project-2.svg" alt="PHP CRM mockup" loading="lazy" decoding="async"></div><div><p class="tag personal">Demo Project</p><h3>PHP/MySQL CRM System</h3><p>Customer management concept with dashboard, invoices, search filters, client status, and reporting.</p><p class="stack">PHP • MySQL • Bootstrap • JavaScript</p><a href="#contact">Discuss similar project →</a></div></article>
+        <article class="project-card reveal tilt-card" data-category="demo"><div class="project-img"><img src="assets/projects/project-1.svg" alt="Landing page mockup" loading="lazy" decoding="async"></div><div><p class="tag personal">Demo Project</p><h3>Modern Business Landing Page</h3><p>Conversion-focused landing page with strong hero section, animated service cards, pricing, and contact CTA.</p><p class="stack">HTML • CSS • JavaScript • Animation</p><a href="#contact">Discuss similar project →</a></div></article>
       </div>
     </section>
 
@@ -191,13 +228,14 @@
           <a class="tilt-card" href="mailto:harilato4@gmail.com"><span>Email</span><b>Professional contact</b><em>harilato4@gmail.com</em></a>
           <a class="tilt-card" href="#home"><span>Upwork</span><b>Available for freelance work / View CV</b><em>Full-Stack Web Developer</em></a>
         </div>
-        <form class="contact-form reveal" action="https://formsubmit.co/harilato4@gmail.com" method="POST">
+        <form class="contact-form reveal" id="contactForm" action="https://formsubmit.co/harilato4@gmail.com" method="POST" data-emailjs="ready">
           <input type="hidden" name="_subject" value="New message from Harilanto Premium Portfolio">
           <input type="hidden" name="_captcha" value="false">
           <div class="form-row"><label>Name<input type="text" name="name" placeholder="Your name" required></label><label>Email<input type="email" name="email" placeholder="you@example.com" required></label></div>
           <div class="form-row"><label>Project Type<select name="project_type"><option>Business Website</option><option>School / Training Website</option><option>PHP/MySQL Application</option><option>Database System</option><option>Node.js REST API</option><option>Maintenance / Bug Fix</option></select></label><label>Budget<select name="budget"><option>Not sure yet</option><option>$50 - $150</option><option>$150 - $300</option><option>$300 - $700</option><option>$700+</option></select></label></div>
           <label>Message<textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea></label>
           <button class="btn primary magnetic" type="submit">Send Message</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
@@ -209,6 +247,8 @@
   </main>
 
   <a class="floating-whatsapp" href="https://wa.me/261322160631?text=Hello%20Harilanto,%20I%20found%20your%20portfolio%20and%20I%20would%20like%20to%20discuss%20a%20project." target="_blank">💬</a>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+  <script src="assets/js/emailjs-config.js" defer></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
